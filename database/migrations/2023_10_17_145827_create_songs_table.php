@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('songs', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->comment('タイトル');
-            $table->integer('owner')->comment('オーナー');
-            $table->string('url')->comment('URL');
+            $table->string('title');        // 曲のタイトル
+            $table->string('artist');       // アーティスト名
+            $table->string('album')->nullable();  // アルバム名（null可）
+            $table->string('genre')->nullable();  // ジャンル（null可）
+            $table->integer('duration')->nullable(); // 曲の長さ（秒数、null可）
             $table->timestamps();
         });
     }
