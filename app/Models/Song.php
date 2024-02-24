@@ -11,6 +11,6 @@ class Song extends Model
 
     public function genre()
     {
-        return $this->belongsTo('App\Models\Genre');
+        return $this->belongsTo(Genre::class);
     }
 }
