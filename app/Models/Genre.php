@@ -9,8 +9,9 @@ class Genre extends Model
 {
     use HasFactory;
 
-    public function song()
+    public function songs()
+
     {
-        return $this->hasMany('App\Models\Song');
+        return $this->hasMany(Song::class);
     }
 }
